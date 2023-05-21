@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Video Search Engine">
+    <link rel="shortcut icon" href="Assets/Logo.svg" type="image/x-icon">
+
+    <!-- Font: Barlow  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Stylesheet      -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Simple Video Search Engine</title>
+</head>
+
+<body>
+    <main class="search-engine-container">
+        <!-- header -->
+        <header class="header-container">
+            <div class="logo-container">
+                <img src="Assets/Logo.svg" alt="logo">
+                <h4>Simple Video Search Engine</h4>
+            </div>
+            <button class="filter-button">
+                <img src="Assets/Filter.svg" alt="Filter Icon">
+            </button>
+        </header>
+        <!-- search  -->
+        <section class="search-container">
+            <form id="input-form" class="search-form">
+                <input id="search-input" type="text" name="search" placeholder="Search video here...">
+                <button type="submit" class="search-icon">
+                    <img src="Assets/Search.svg" alt="Search Icon">
+                </button>
+            </form>
+        </section>
+        <!-- videos  -->
+        <section id="videos" class="videos-container"></section>
+        <!-- pagination  -->
+        <section class="pagination-container">
+            <div class="page-number-box">
+                <button id="prev" class="pagination-button hide">
+                    <img src="Assets/Previous.svg" alt="Previous Icon">
+                    <h5>Prev</h5>
+                </button>
+                <input type="number" id="page-number" class="page-number hide" value="1" disabled />
+                <button id="next" class="pagination-button">
+                    <h5>Next</h5>
+                    <img src="Assets/Next.svg" alt="Next Icon">
+                </button>
+            </div>
+        </section>
+        <!-- suggestions  -->
+        <section class="suggestion-container">
+            <button class="suggestion-card">
+                <img src="Assets/Search.svg" alt="Search Icon">
+                <p>Search <b>Black Pink</b> on Google</p>
+            </button>
+        </section>
+        <div class="popup-container hide">
+        </div>
+    </main>
+    <script async src="https://cse.google.com/cse.js?cx=<YourCXKey>"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
